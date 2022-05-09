@@ -56,3 +56,24 @@ password: 123456
 		
 		it takes a parameter at the end as an order id as oid to generate an invoice of that particular order
 		
+		
+Q2:
+Ans2: 
+
+in order to auto generate a list of products/items with low stock/expiry from the inventory
+database. The list must be updated at 12 A.M. daily
+
+we need to have a field inside the model as expiry days and it needs to be sorted using the django order_by
+udated in the def save() function in django models.py to (expiry-datetime.datetime.date)
+
+Items.Objects.all().order_by(expiry)
+
+
+Q3:
+Ans3: 
+
+Post save signal can be used to send api request to another server to create that user 
+in it's database also
+
+
+
